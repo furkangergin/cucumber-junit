@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 public class WebTableLoginPage {
 
     public WebTableLoginPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(name = "username")
+    @FindBy(name="username")
     public WebElement inputUsername;
 
     @FindBy(name = "password")
@@ -21,9 +21,11 @@ public class WebTableLoginPage {
     @FindBy(xpath = "//button[.='Login']")
     public WebElement loginButton;
 
+
+
     /**
-     * No parameters.
-     * When we call this method, it will directly login using
+     * no parameters
+     * when we call this method, it will directly log in using
      *
      * Username: Test
      * Password: Tester
@@ -35,7 +37,7 @@ public class WebTableLoginPage {
     }
 
     /**
-     * This method will accept two arguments and login.
+     * this method with accept two arguments and log in.
      * @param username
      * @param password
      */
@@ -53,5 +55,26 @@ public class WebTableLoginPage {
         inputUsername.sendKeys(ConfigurationReader.getProperty("web.table.username"));
         inputPassword.sendKeys(ConfigurationReader.getProperty("web.table.pw"));
         loginButton.click();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
 }
